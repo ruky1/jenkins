@@ -6,6 +6,10 @@ import org.springframework.web.servlet.ModelAndView;
 
 @Controller
 public class ShopController {
+	@GetMapping("/")
+	public String Start() {
+		return "redirect:shop/list";
+	}
 	
 	@GetMapping("/shop/list")
 	public ModelAndView list() {
